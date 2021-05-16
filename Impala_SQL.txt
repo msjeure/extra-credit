@@ -1,0 +1,58 @@
+Impala/SQL
+	## Overall Business statistics in different boro:
+	
+## number of different business type in each borough
+	select borough,type, count(type) from data_business group by borough,type order by count(industry)desc;
+	
+## number of different license status in each borough
+	select borough,status,count(status) from data_business group by borough,status order by count(industry)desc;
+	
+## business type in each borough
+	select distinct type from data_business;
+	
+## license status
+	select distinct status from data_business;
+	
+## industry categories
+	select distinct industry from data_business;
+
+
+
+
+
+
+## top 10 industry in Queens 
+	select borough,count(industry),industry from data_business where borough="Queens" group by borough,industry  order by count(industry)desc limit 10;
+## industry in Queens ordered by number
+	select borough,count(industry),industry from data_business where borough="Queens" group by borough,industry  order by count(industry)desc ;
+## industry in Queens ordered by number
+	select borough,count(industry),industry from data_business where borough="QUEENS" group by borough,industry  order by count(industry)desc;
+
+##top 10 industry in Staten Island ordered by number
+	select borough,count(industry),industry from data_business where borough="Staten Island" group by borough,industry  order by count(industry)desc limit 10;
+##industry in Staten Island ordered by number
+	select borough,count(industry),industry from data_business where borough="Staten Island" group by borough,industry  order by count(industry)desc;
+
+##top 10 industry in Bronx ordered by number
+	select borough,count(industry),industry from data_business where borough="BRONX" group by borough,industry  order by count(industry)desc limit 10;
+##top 10 industry in Bronx ordered by number
+	select borough,count(industry),industry from data_business where borough="Bronx" group by borough,industry  order by count(industry)desc limit 10;
+##industry in Bronx ordered by number
+	select borough,count(industry),industry from data_business where borough="Bronx" group by borough,industry  order by count(industry)desc;
+
+##top 10 industry in Brooklyn ordered by number
+	select borough,count(industry),industry from data_business where borough="Brooklyn" group by borough,industry  order by count(industry)desc limit 10;
+##industry in Brooklyn ordered by number
+	select borough,count(industry),industry from data_business where borough="Brooklyn" group by borough,industry  order by count(industry)desc;
+##industry in Brooklyn ordered by number
+	select borough,count(industry),industry from data_business where borough="BROOKLYN" group by borough,industry  order by count(industry)desc;
+
+##industry in Manhattan ordered by number
+	select borough,count(industry),industry from data_business where borough="MANHATTAN" group by borough,industry  order by count(industry)desc;
+##top 10 industry in Manhattan ordered by number
+	select borough,count(industry),industry from data_business where borough="Manhattan" group by borough,industry  order by count(industry)desc limit 10;
+##industry in Manhattan ordered by number
+	select borough,count(industry),industry from data_business where borough="Manhattan" group by borough,industry  order by count(industry)desc;
+
+	
+
